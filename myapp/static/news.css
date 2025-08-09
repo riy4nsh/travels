@@ -1,0 +1,201 @@
+* {
+    margin: 0px;
+    padding: opx;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.box {
+    height: 50px;
+    width: 97%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.box2,
+.box3 {
+    display: flex;
+    gap: 25px;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+.box1 {
+    display: flex;
+    font-family: cursive;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.x {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: black;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+    background-color: black;
+    font-family: cursive;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+
+/* strt */
+
+.home {
+    height: 60px;
+    width: 100%;
+    background-color: white;
+}
+
+.home h3 {
+    text-align: center;
+    padding-top: 20px;
+    color: red;
+}
+
+.home a {
+    text-decoration: none;
+    color: black;
+}
+
+.home a:hover {
+    color: red;
+}
+
+
+/* 3card box */
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    position: relative;
+    padding-left: 4%;
+}
+
+.card {
+    position: relative;
+    width: 30%;
+    height: 550px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Optional: Adds a slight zoom effect on hover */
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.hover-paragraph {
+    position: absolute;
+    bottom: -100px;
+    /* Hidden below the card */
+    left: 10px;
+    width: calc(100% - 20px);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgb(16, 14, 14);
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+
+/* Hover effect to slide the paragraph up */
+
+.card:hover .hover-paragraph {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#zimzam {
+    width: 30%;
+    height: 550px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#simsam {
+    padding-bottom: 5%;
+}

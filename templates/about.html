@@ -1,0 +1,401 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour & Travels</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+       {% load static %}
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+    <link rel="stylesheet" href="{% static 'footer.css' %}">
+    <link rel="stylesheet" href="{% static 'nav.css' %}">
+
+  <!-- link swiper-js -->
+  <link
+  rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
+  <style>
+    .team-section {
+        background-color: #f9f9f9;
+        padding: 50px 0;
+    }
+
+    .team-section .about-us-text {
+        font-size: 1.5rem;
+
+    }
+
+    .team-section .btn-custom {
+        background-color: #007bff;
+        color: white;
+        border-radius: 30px;
+        padding: 10px 20px;
+    }
+
+    .team-section .team-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .team-section .team-image {
+        text-align: center;
+    }
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+.line{
+    width: 100px;
+    height: 2px;
+    background-color: burlywood;
+    margin: auto;
+}
+
+.img-fluid{
+    height: 300px;
+    width: 350px !important;
+    object-fit: cover;
+}
+.card{
+    border:none;
+}
+.four {
+    padding-left: 100px;
+}
+.three {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 233px;
+    position: absolute;
+    left: 220px;
+    width: 47.666667%!important;
+    top: 38px;
+}
+.one {
+    flex: 0 0 auto;
+    width: 52.33333333% !important;
+}
+.bi{
+    font-size: 25px !important;
+    color: rgb(12, 12, 156);
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .three{
+        left: 0px;
+        background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        top: 300px !important;
+        width: 100%!important;
+    }
+    .one{
+        flex: 0 0 auto;
+        width: 100% !important;
+    }
+    .img-fluid {
+        width: 500px !important;
+        height: 500px !important;
+    }
+    .col {
+        padding-left: 10px;
+    }
+    .container2{
+        padding-bottom: 250px !important;
+    }
+  }
+</style>
+</head>
+<body>
+    <div class="container-fluid">
+
+                <!--  navbar start  -->
+                <div class="box">
+                    <div class="box1"><span style="font-size:30px;cursor:pointer; padding-left: 20px;" onclick="openNav()">&#9776;</span>
+                    </div>
+                    <div class="box2">
+                        <a href="../index">Home</a>
+                        <a href="../tours">Tours</a>
+                <a href="../destinations">Destinations</a>
+                <a href="../news">News</a>
+                <a href="../contact">Contact</a>
+                <a href="../about" style="color: rgba(255, 0, 0, 0.605);">About</a>
+
+
+                    </div>
+                    <div class="box3">
+                        <div class="x">
+                            <a href=""><i class="ri-search-line"></i></a>
+                        </div>
+                        <div class="x">
+                            <a href="../login"><i class="ri-user-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="../index">Home</a>
+                <a href="../tours">Tours</a>
+                <a href="../destinations">Destinations</a>
+                <a href="../news">News</a>
+                <a href="../contact">Contact</a>
+                <a href="../about" style="color: rgba(255, 0, 0, 0.605);">About</a>
+                </div>
+
+                <!-- Navbar end -->
+
+              <!-- login model -->
+      <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form>
+                <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title d-flex align-items-center"> <i class="bi bi-person-circle fs-3 me-2"></i>User Login</h5>
+                      <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">Email address</label>
+                            <input type="email" class="form-control shadow-none"  >
+                          </div>
+                          <div class="mb-4">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control shadow-none"  >
+                          </div>
+                          <div class="d-flex align-items-center justify-content-between mb-2">
+                            <button type="submit" class="btn btn-dark shadow-none">LOGIN</button>
+                        <a href="javascript: void(0)" class="text-secondary text-decoration-none">Forgot Password?</a>
+                        </div>
+                    </div>
+
+                  </div>
+            </form>
+
+        </div>
+      </div>
+          <!-- register model -->
+      <div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <form>
+                <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title d-flex align-items-center"> <i class="bi bi-person-lines-fill fs-3 me-2"></i> User Register</h5>
+                      <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <span class="badge bg-light text-dark mb-3 text-wrap lh-base">Note: Your details must match your ID(Aadhar card, Passport, Pan card, Driving License etc.)
+                            that will be required during check-in.
+                        </span>
+                         <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 ps-0 mb-3">
+                                  <label class="form-label">Name</label>
+                                  <input type="text" class="form-control shadow-none"  >
+                                </div>
+                                <div class="col-md-6 p-0">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control shadow-none"  >
+                                  </div>
+                                  <div class="col-md-6 ps-0 mb-3">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="number" class="form-control shadow-none"  >
+                                  </div>
+                                  <div class="col-md-6 p-0 mb-3">
+                                      <label class="form-label">Picture</label>
+                                      <input type="file" class="form-control shadow-none"  >
+                                    </div>
+                                    <div class="col-md-12 p-0 mb-3">
+                                        <label class="form-label">Address</label>
+                                        <textarea class="form-control shadow-none" rows="2"></textarea>
+                                      </div>
+                                       <div class="col-md-6 ps-0 mb-3">
+                                        <label class="form-label">Pincode</label>
+                                        <input type="number" class="form-control shadow-none"  >
+                                      </div>
+
+                                       <div class="col-md-6 p-0 mb-3">
+                                        <label class="form-label">Date of birth</label>
+                                        <input type="date" class="form-control shadow-none"  >
+                                      </div>
+
+                                      <div class="col-md-6 ps-0 mb-3">
+                                        <label class="form-label">Password</label>
+                                        <input type="password" class="form-control shadow-none"  >
+                                      </div>
+                                      <div class="col-md-6 p-0 mb-3">
+                                        <label class="form-label">Conform Password</label>
+                                        <input type="password" class="form-control shadow-none"  >
+                                      </div>
+                            </div>
+                         </div>
+                          <div class="text-center my-1">
+                            <button typ="submit" class="btn btn-dark shadow-none">REGISTER</button>
+                          </div>
+                    </div>
+
+                  </div>
+            </form>
+
+        </div>
+      </div>
+      <h2 class="mt-3 pt-4 mb-4 text-center fw-bold h-font" style="text-decoration: underline;">About Us</h2>
+      <section class="team-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Text Section -->
+                <div class="col-md-8">
+
+                    <p class="about-us-text fw-bold h-font ">Welcome to our tour and travel company, where we’ve been turning travel dreams into unforgettable experiences for the past <span class="fw-bold h-font" style="color: red;">15 years</span>.
+                        Founded by  <span class="fw-bold h-font"  style="color: rgb(255, 0, 34);">Be Leal</span>, our company is dedicated to providing exceptional travel services that cater to the diverse needs of our clients. With a deep passion for exploration
+                        and a commitment to excellence, we offer personalized travel solutions that take you to the heart of your chosen destinations. Whether you're seeking adventure, relaxation, or cultural
+                         immersion, our expert team is here to ensure that every journey you embark on is seamless, memorable, and truly special. Join us and let’s create your next great travel story together.
+                     </p>
+
+                </div>
+                <!-- Image Section -->
+                <div class="col-md-4 team-image">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static 'world.jpg'%}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title fw-bold h-font" >Founder</h5>
+
+                          <div class="d-flex justify-content-around">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-envelope-check-fill"></i>
+                            <i class="bi bi-linkedin"></i>
+                        </div>
+                        </div>
+                      </div>
+                    <!-- <img src="images/ajmer5.jpg" alt="Team Image"> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <h5 class="mt-3 pt-4 mb-4 text-center fw-bold h-font" style="text-decoration: underline;">Our Team Member</h5>
+    <div class="container2 py-5">
+
+
+        <div class="row row-cols-1 row-cols-md-2 g-4 py-5">
+            <div class="col four">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4 one">
+                            <img src="{% static 'travels.jpg'%}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8 three">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold h-font">Arya</h5>
+                                <p class="card-text fw-bold h-font">"Every achievement is a reflection of your hard work—thank you for always going above and beyond!"</p>
+                                <p class="card-text fw-bold h-font"><small class="text-muted">Designation : CEO</small></p>
+                            </div>
+                            <div class="d-flex justify-content-around">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-envelope-check-fill"></i>
+                                <i class="bi bi-linkedin"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col four">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4 one">
+                            <img src="{% static 'travels.jpg'%}" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8 three">
+                            <div class="card-body">
+                                <h5 class="card-title">Vartika</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, est?</p>
+                                <p class="card-text"><small class="text-muted">Designation : Front-end</small></p>
+                            </div>
+                            <div class="d-flex justify-content-around">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-envelope-check-fill"></i>
+                                <i class="bi bi-linkedin"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <footer class="footer">
+            <div class="waves">
+              <div class="wave" id="wave1"></div>
+              <div class="wave" id="wave2"></div>
+              <div class="wave" id="wave3"></div>
+              <div class="wave" id="wave4"></div>
+            </div>
+            <ul class="social-icon">
+              <li class="social-icon__item"><a class="social-icon__link" href="#">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+              <li class="social-icon__item"><a class="social-icon__link" href="#">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+              <li class="social-icon__item"><a class="social-icon__link" href="#">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+              <li class="social-icon__item"><a class="social-icon__link" href="#">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+            </ul>
+            <ul class="menu">
+              <li class="menu__item"><a class="menu__link" href="../index">Home</a></li>
+              <li class="menu__item"><a class="menu__link" href="../tours">Tours</a></li>
+              <li class="menu__item"><a class="menu__link" href="../destinations">Destinations</a></li>
+              <li class="menu__item"><a class="menu__link" href="../news">News</a></li>
+              <li class="menu__item"><a class="menu__link" href="../contact">Contact</a></li>
+              <li class="menu__item"><a class="menu__link" href="../about">About</a></li>
+
+            </ul>
+            <p>&copy; Vartika Nigam | All Rights Reserved</p>
+          </footer>
+          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        <!-- footer end -->
+
+
+
+
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        $(document).ready(function() {
+            $('.slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                dots: false,
+                arrows: false,
+            });
+        });
+    </script>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+    </html>

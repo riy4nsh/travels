@@ -1,0 +1,231 @@
+*{
+    margin: 0px;
+    padding: opx;
+   
+}
+body{
+    font-family: "Lato", sans-serif;
+    
+}
+.box {
+    height: 50px;
+    width: 97%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+
+    }
+.box2, .box3 {
+    display: flex;
+    gap: 25px;
+    font-size: 20px;
+    background-color: transparent;
+   
+}
+.box1 {
+    display: flex;
+    font-family: cursive;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.x {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: black;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+    background-color: black;
+    font-family: cursive;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  /* strt */
+
+
+
+.home{
+    height: 60px;
+    width: 100%;
+    background-color: white;
+}
+.home h3{
+text-align: center;
+padding-top: 20px;
+color: red;
+}
+.home a{
+    text-decoration: none;
+    color: black;
+}
+.home a:hover{
+    color: red;
+}
+
+
+/* 8 box division */
+
+.plz {
+    display: flex;
+    height: 400px;
+    width: 100%;
+    padding-bottom: 1%;
+    padding-top: 2%;
+  }
+  .plz1{
+    height: 400px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  #container {
+    position: relative;
+    width: 90%;
+   padding: 10px;
+   height: 400px;
+  }
+  #container img {
+    object-fit: cover;
+    overflow: hidden;
+    height: 400px;
+    width: 100%;
+    
+}
+  
+  .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 400px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.4); 
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    
+  }
+  
+  #container:hover .image {
+    opacity: 0.9;
+    transform: scale(1.07); 
+    transition: transform 0.4s ease-in-out;
+    box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.4); 
+  }
+  
+  #container:hover .middle {
+    opacity: 1;
+    box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.4); 
+  }
+  
+  .text {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+
+  /* boxex */
+
+  /* boxex */
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    position: relative;
+    padding-left: 4%;
+    padding-bottom: 3%;
+}
+
+.card {
+    position: relative;
+    width: 30%;
+    height: 550px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02); /* Optional: Adds a slight zoom effect on hover */
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    color: white;
+   
+    padding: 10px;
+    font-size: 20px;
+ 
+}
+.tip{
+    background-color: transparent;
+}

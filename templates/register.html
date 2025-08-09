@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>Register</title>
+    {% load static %}
+    <style>
+        /* Primary Theme */
+
+         :root {
+            --primary-color: #3498db;
+            --primary-dark: #2980b9;
+            --white-color: #fff;
+            --input-border-color: #ccc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://cdn.pixabay.com/photo/2019/07/09/07/01/background-4326353_1280.jpg');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            object-fit: cover;
+            background-repeat: repeat-x, repeat-y;
+            background-size: 100%;
+        }
+
+        .form-container {
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            border: 1px solid white;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--input-border-color);
+            border-radius: 4px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-group input:focus {
+            border-color: var(--primary-color);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary-color);
+            border: none;
+            color: var(--white-color);
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: var(--primary-dark);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="padding-right: 25%;"><a href="../index" style="text-decoration: none;color: white;"><i class="ri-home-5-line">&ensp;Return to Home</i></a></h1>
+
+    <div class="form-container ">
+        <h2>Register for Your Dream Tour</h2>
+
+
+        <form action="../formcode/" method="post">
+            {% csrf_token %}
+
+
+            <div class="input-group ">
+                <label for="name ">Full Name</label>
+                <input type="text" id="name " name="name" required>
+            </div>
+
+            <div class="input-group ">
+                <label for="email ">Email Address</label>
+                <input type="email" id="email " name="email" required>
+            </div>
+
+            <div class="input-group ">
+                <label for="phone ">Phone Number</label>
+                <input type="number" id="phone " name="phone" required>
+            </div>
+
+            <div class="input-group ">
+                <label for="destination ">Password</label>
+                <input type="password" id="destination " name="password" required>
+            </div>
+
+            <div class="input-group ">
+                <label for="date ">Repeat Password</label>
+                <input type="password" id="date " name="repeatpassword" required>
+            </div>
+
+            <button type="submit">Register Now</button>
+        </form>
+        <!-- JavaScript to handle success alert and redirect -->
+
+    </div>
+
+
+
+<script>
+
+    {% if success %}
+
+        alert('Register successfully');
+        window.location.href = '../login';
+    {% endif %}
+</script>
+</body>
+
+</html>

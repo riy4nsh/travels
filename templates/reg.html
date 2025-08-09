@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {% load static %}
+
+    <link rel="stylesheet" href="{% static 'admin.css' %}">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Admin Dashboard Panel</title>
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+               <img src="{% static 'logo 1.jpg' %}" alt="logo">
+            </div>
+
+            <span class="logo_name">Zimzam</span>
+        </div>
+
+        <div class="menu-items">
+           <ul class="nav-links">
+                <li><a href="../admins">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Dahsboard</span>
+                </a></li>
+                <li><a href="../cont">
+                    <i class="uil uil-files-landscapes"></i>
+                    <span class="link-name">Contact Details</span>
+                </a></li>
+                <li><a href="../reg">
+                    <i class="uil uil-chart"></i>
+                    <span class="link-name">Register Details</span>
+                </a></li>
+
+            </ul>
+            <ul class="logout-mode">
+                <li><a href="#">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            
+           <img src="{% static 'profile1.jpg'%}" alt="profile">
+        </div>
+
+        <div class="dash-content">
+        
+            <div class="activity">
+                <div class="title">
+                    <i class="uil uil-clock-three"></i>
+                    <span class="text">Registration Details</span>
+                </div>
+
+{% for x in result %}
+    <div class="activity-data">
+        <div class="data joined">
+            <span class="data-list">{{ forloop.counter }}</span>
+        </div>
+        <div class="data names">
+            <span class="data-list">{{ x.name }}</span>
+        </div>
+        <div class="data email">
+            <span class="data-list">{{ x.email }}</span>
+        </div>
+        <div class="data phone">
+            <span class="data-list">{{ x.phone }}</span>
+        </div>
+        <div class="data password">
+            <span class="data-list">{{ x.password }}</span>
+        </div>
+        <div class="data repeat-password">
+            <span class="data-list">{{ x.repeatpassword }}</span>
+        </div>
+        <div class="data edit">
+            <span class="data-list"><a href="../edit/{{ x.id }}">Edit</a></span>
+        </div>
+        <div class="data delete">
+            <span class="data-list"><a href="../delete/{{ x.id }}">Delete</a></span>
+        </div>
+    </div>
+
+{% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+     <script src="{% static 'admin.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>Edit Page</h1>
+ <form action="../update/" method="post">
+   {% csrf_token %}
+   <input type="hidden" name="id" value="{{ res.id }}"/>
+
+   Name: <input type="text" name="name" value="{{ res.name }}"><br>
+
+     email: <input type="email" name="email" value="{{ res.email }}"><br>
+
+   phone: <input type="number" name="phone" value="{{ res.phone }}"><br>
+
+   password: <input type="password" name="password" value="{{ res.password }}"><br>
+
+   repeatpassword: <input type="password" name="repeatpassword" value="{{ res.repeatpassword }}"><br>
+
+   <button type="submit">Update</button>
+ </form>
+</body>
+</html>

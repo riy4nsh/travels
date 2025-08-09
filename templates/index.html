@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour And Travels</title>
+      {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'resp.css' %}">
+    <link rel="stylesheet" href="{% static 'footer.css' %}">
+    <link rel="stylesheet" href="{% static 'nav.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <!--  navbar start  -->
+        <div class="box">
+            <div class="box1"><span style="font-size:30px;cursor:pointer; padding-left: 20px;" onclick="openNav()">&#9776;</span>&emsp;
+                <img src="{% static 'logo.jpg'%}" alt="logo" style="height: 40px;width: 40px;">
+            </div>
+            <div class="box2">
+
+                <a href="../index" style="color: rgba(255, 0, 0, 0.605);">Home</a>
+                <a href="../tours">Tours</a>
+                <a href="../destinations">Destinations</a>
+                <a href="../news">News</a>
+                <a href="../contact">Contact</a>
+                <a href="../about">About</a>
+
+
+            </div>
+            <div class="box3">
+                <div class="x">
+                    <a href=""><i class="ri-search-line"></i></a>
+                </div>
+                <div class="x">
+                    <a href="../login"><i class="ri-user-line"></i></a>
+                </div>
+            </div>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="../index" style="color: rgba(255, 0, 0, 0.605);">Home</a>
+            <a href="../tours">Tours</a>
+            <a href="../destinations">Destinations</a>
+            <a href="../news">News</a>
+            <a href="../contact">Contact</a>
+            <a href="../about">About</a>
+        </div>
+
+        <!-- Navbar end -->
+
+        <!-- first div -->
+
+        <div class="container">
+            <img src="{% static 'main.jpg'%}" alt="Norway" style="width:100%;">
+            <div class="text-block">
+                <p style="color: #40E0D0; font-size: 29px;font-weight: normal;">OPEN YOUR EYE TO</p>
+                <p style="font-size: 35px; color: #40E0D0;">THE HIDDEN WORLD</p>
+                <button id="btnn">LEARN MORE</button>
+            </div>
+        </div>
+
+
+        <div class="bloging" style="padding-bottom:5%;">
+            <h1>Bloging</h1>
+            <br>
+            <p>Pick a certain destination and go ahead!</p>
+            <br>
+            <pre>____</pre>
+        </div>
+
+        <!-- div 3rd box -->
+
+        <div class="something">
+            <div class="container" id="some1">
+                <img src="{% static 'beluga.jpg'%}" alt="Norway" style="width:100%;">
+                <div class="text-block">
+                    <h4 style="color: white;">Blue laguna of Greece</h4>
+
+                </div>
+            </div>
+            <div class="some2">
+                <div class="thing1">
+
+                    <div class="container" id="so1">
+                        <img src="{% static 'spain.jpg'%}" alt="Norway" style="width:100%;">
+                        <div class="text-block">
+                            <h4 style="color: white;">Journey to Spain</h4>
+
+                        </div>
+                    </div>
+                    <div class="container" id="so2">
+                        <img src="{% static 'san1.jpg'%}" alt="Norway" style="width:100%;">
+                        <div class="text-block">
+                            <h4 style="color: white;">San Francisco beauty</h4>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="thing2">
+                    <div class="container" id="me1">
+                        <img src="{% static 'turkey.jpg'%}" alt="Norway" style="width:100%;">
+                        <div class="text-block">
+                            <h4 style="color: white;">Turkey, Cappadonia</h4>
+
+                        </div>
+                    </div>
+                    <div class="container" id="me2">
+                        <img src="{% static 'canary.jpg'%}" alt="Norway" style="width:100%;">
+                        <div class="text-block">
+                            <h4 style="color: white;">Canary islands</h4>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- .. -->
+
+
+
+        <div class="bloging" style="padding-top: 5%;">
+            <h1>Hot Deals</h1>
+            <br>
+            <p>Use our special offers for exploring the world</p>
+            <br>
+            <pre>____</pre>
+        </div>
+
+
+
+        <!-- slide show -->
+
+
+        <div class="scroll-container">
+            <img src="{% static 'mountain.jpg'%}" alt="Cinque Terre">
+            <img src="{% static 'regensburg.jpg'%}" alt="Forest">
+            <img src="{% static 'river.jpg'%}" alt="Northern Lights">
+            <img src="{% static 'shops.jpg'%}" alt="Mountains">
+        </div>
+
+        <!--  -->
+
+        <div class="email">
+            <div class="email1">
+                <h2 style="color: black;  padding-left: 6%; padding-top: 5%; font-weight: bolder;">The World Is <br/> For You Buddy!</h2>
+                <p style="  padding-left: 6%; font-size: 24px;">Discover the world by travelling to different places.</p>
+            </div>
+            <div class="email2">
+                <div class="layout">
+                    <img src="{% static 'travels.jpg'%}" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- -->
+
+
+        <div class="bloging" style="padding-top: 10%;">
+            <h1>Country Tours</h1>
+            <br>
+            <p style="font-size: 25px; font-weight: normal;">Each country provides a lot of opportunity to relax, learn something new and be excited.</p>
+            <br>
+            <pre>____</pre>
+        </div>
+
+        <!-- 8b0x division -->
+
+        <div class="plz">
+            <div class="plz1">
+                <div class="container" id="container">
+                    <img src="{% static 'switzerland1.jpg'%}" alt="Avatar" class="image" style="width:100%">
+                    <div class="middle">
+                        <div class="text">Jungfraujoch <br/>Switzerland</div>
+                    </div>
+                </div>
+            </div>
+            <div class="plz1">
+                <div class="container" id="container">
+                    <img src="{% static 'japa1.jpg'%}" alt="Avatar" class="image" style="width:100%">
+                    <div class="middle">
+                        <div class="text">Mount Fuji <br/>Japan</div>
+                    </div>
+                </div>
+            </div>
+            <div class="plz1">
+                <div class="container" id="container">
+                    <img src="{% static 'newzealand1.jpg'%}" alt="Avatar" class="image" style="width:100%">
+                    <div class="middle">
+                        <div class="text">Milford Sound <br/>New Zealand</div>
+                    </div>
+                </div>
+            </div>
+            <div class="plz1">
+                <div class="container" id="container">
+                    <img src="{% static 'norway1.jpg'%}" alt="Avatar" class="image" style="width:100%">
+                    <div class="middle">
+                        <div class="text">Geirangerfjord <br/>Norway</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+
+        <div class="plz">
+            <div class="plz1">
+                <div class="container" id="container">
+                    <img src="{% static 'italy1.jpg'%}" alt="Avatar" class="image" style="width:100%">
+                    <div class="middle">
+                        <div class="text">Amalfi Coast <br/> Italy</div>
+                    </div>
+                </div>
+            </div>
+            <div class="plz1">
+                <div class="container" id="container">
+                    <img src="{% static 'canada.jpg'%}" alt="Avatar" class="image" style="width:100%">
+                    <div class="middle">
+                        <div class="text">Banff Park <br/>Canada</div>
+                    </div>
+                </div>
+            </div>
+            <div class="plz1">
+                <div class="container" id="container">
+                    <img src="{% static 'Maldives1.jpg'%}" alt="Avatar" class="image" style="width:100%">
+                    <div class="middle">
+                        <div class="text">Vaadhoo Island <br/>Maldives</div>
+                    </div>
+                </div>
+            </div>
+            <div class="plz1">
+                <div class="container" id="container">
+                    <img src="{% static 'iceland1.jpg'%}" alt="Avatar" class="image" style="width:100%">
+                    <div class="middle">
+                        <div class="text"> Jökulsárlón<br/>Iceland </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- footer strt -->
+
+
+        <footer class="footer">
+            <div class="waves">
+              <div class="wave" id="wave1"></div>
+              <div class="wave" id="wave2"></div>
+              <div class="wave" id="wave3"></div>
+              <div class="wave" id="wave4"></div>
+            </div>
+            <ul class="social-icon">
+              <li class="social-icon__item"><a class="social-icon__link" href="#">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+              <li class="social-icon__item"><a class="social-icon__link" href="#">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+              <li class="social-icon__item"><a class="social-icon__link" href="#">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+              <li class="social-icon__item"><a class="social-icon__link" href="#">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+            </ul>
+            <ul class="menu">
+              <li class="menu__item"><a class="menu__link" href="../index">Home</a></li>
+              <li class="menu__item"><a class="menu__link" href="../tours">Tours</a></li>
+              <li class="menu__item"><a class="menu__link" href="../destinations">Destinations</a></li>
+              <li class="menu__item"><a class="menu__link" href="../news">News</a></li>
+              <li class="menu__item"><a class="menu__link" href="../contact">Contact</a></li>
+              <li class="menu__item"><a class="menu__link" href="../about">About</a></li>
+
+            </ul>
+            <p>&copy; Vartika Nigam | All Rights Reserved</p>
+          </footer>
+          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        <!-- footer end -->
+
+
+
+
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        $(document).ready(function() {
+            $('.slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                dots: false,
+                arrows: false,
+            });
+        });
+    </script>
+</body>
+
+</html>
